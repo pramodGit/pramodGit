@@ -1,0 +1,63 @@
+/* ===== Less Styles ========================================================
+   Author: Pramod (2014) (http://www.userinterfacemedia.com)
+   ========================================================================== */
+
+@import "default.less";
+
+/* = Mixin Styles
+========================================================================== */
+.border-radius (@border-radius) {
+  border-radius: @border-radius;
+  -moz-border-radius: @border-radius;
+  -webkit-border-radius: @border-radius;
+}
+.bordered {
+  border: solid 1px @border-color;
+}
+
+/* = Styling
+========================================================================== */
+
+.navbar-inner {
+	background-image: linear-gradient(to bottom,@light-blue,@blue);
+}
+.navbar .nav > li > a {
+	color: @nav-text-color;
+	text-shadow: 0 1px 0 @nav-text-shadow;
+}
+.navbar .nav > li.active > a {
+  color: @active-color;
+}
+h1, h2 {
+  color: @grey;
+}
+.showcase, 
+#title-template,
+#pr-tweets {
+	background: @content-background-light;
+	.bordered;
+	.border-radius(@radius);
+}
+#title-template,
+#pr-tweets {
+	background: @content-background;
+}
+.showcase .heading a {
+	color: @blue;
+	&:hover, &:active {color: @grey;}    
+}
+#post-feed .heading a {
+	color: @grey;
+	&:hover, &:active {color: @blue;}  
+}
+.thumbnail {
+	border-color: @thumbsborder-color;
+	.border-radius(@radius12);
+}
+.thumbnail img {
+	.border-radius(@radius12);
+}
+#title-template .thumbnail,
+#title-template .thumbnail img{
+	.border-radius(@radius10);
+}
