@@ -35,10 +35,10 @@ require.config({
 		'jQuery': {
 			'exports' : 'jQuery'
 		},
-		'angular': {
+		'angularRoute' : {
 			'exports' : 'angular'
 		},
-		'angularRoute' : {
+		'angular': {
 			'exports' : 'angular'
 		},
 		'bootstrap': {

@@ -5,8 +5,8 @@ define([
 	'angularRoute'
 ], function (angular) {
 
-	angular.module('uimNavApp', ['ngRoute']);
-	var uimNavAppModule = angular.module('uimNavApp', []);
+	//angular.module('uimNavApp', ['ngRoute']);
+	var uimNavAppModule = angular.module('uimNavApp', ['ngRoute']);
 	
 	// Navigation
 	uimNavAppModule.controller('uimNavCtrl', ['$scope', function($scope){
