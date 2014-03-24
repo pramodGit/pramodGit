@@ -4,9 +4,9 @@ define([
 	'angular',
 	'angularRoute'
 ], function (angular) {
-
-	angular.module('uimContentApp', ['ngRoute']);
-	var uimContentAppModule = angular.module('uimContentApp', []);
+	
+	//angular.module('uimContentApp', ['ngRoute']);
+	var uimContentAppModule = angular.module('uimContentApp', ['ngRoute']);
 
 	// Content
 	uimContentAppModule.controller('uimAppContentCtrl', ['$scope', function ($scope) {

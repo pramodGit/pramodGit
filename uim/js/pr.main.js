@@ -14,9 +14,9 @@ require.config({
 	baseUrl: 'js',
 	paths: {
 		'jQuery': '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min',
-		'modernizr': 'http://modernizr.com/downloads/modernizr-latest',
-		'angular': '//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min',
+		'modernizr': 'http://modernizr.com/downloads/modernizr-latest',		
 		'angularRoute': 'lib/angular-route',
+		'angular': '//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min',
 		'bootstrap': 'lib/bootstrap',
 		'less': 'lib/less',
 		'underscore': 'lib/underscore',
@@ -36,7 +36,7 @@ require.config({
 			'exports' : 'jQuery'
 		},
 		'angularRoute' : {
-			'exports' : 'angular'
+			'exports' : 'ngRoute'
 		},
 		'angular': {
 			'exports' : 'angular'

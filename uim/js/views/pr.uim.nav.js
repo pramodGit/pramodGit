@@ -3,7 +3,7 @@
 define([
 	'angular',
 	'angularRoute'
-], function (angular) {
+], function () {
 
 	//angular.module('uimNavApp', ['ngRoute']);
 	var uimNavAppModule = angular.module('uimNavApp', ['ngRoute']);
@@ -15,7 +15,7 @@ define([
 		//$scope.sec = 'Blog';
 		//$scope.third = 'Contact';
 	}]);
-	//angular.bootstrap(document.getElementById("uimNavApp"),['uimNavApp']);
+	angular.bootstrap(document.getElementById("uimNavApp"),['uimNavApp']);
 	// Return Module
 	return uimNavAppModule;
 
