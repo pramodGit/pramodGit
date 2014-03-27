@@ -14,9 +14,9 @@ require.config({
 	baseUrl: 'js',
 	paths: {
 		'jQuery': '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min',
-		'modernizr': 'http://modernizr.com/downloads/modernizr-latest',		
-		'angularRoute': 'lib/angular-route',
-		'angular': '//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min',
+		'modernizr': 'http://modernizr.com/downloads/modernizr-latest',
+		'angular': '//ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min',
+		'angularRoute': '//ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-route.min',
 		'bootstrap': 'lib/bootstrap',
 		'less': 'lib/less',
 		'underscore': 'lib/underscore',
@@ -35,11 +35,12 @@ require.config({
 		'jQuery': {
 			'exports' : 'jQuery'
 		},
-		'angularRoute' : {
-			'exports' : 'ngRoute'
-		},
 		'angular': {
 			'exports' : 'angular'
+		},
+		'angularRoute' : {
+			'exports' : 'ngRoute',
+			'deps': ['angular']
 		},
 		'bootstrap': {
 			'exports' : 'bootstrap',
@@ -95,6 +96,29 @@ require(['jQuery', 'modernizr', 'angular', 'angularRoute', 'less', 'bootstrap', 
 		pr.uim = (function () {
 
 			var _this = this; /* Store this to avoid scope conflicts */
+
+			/**
+			 * Search
+			 */
+			this.searchInSite = function () {
+				$("#searchForm").submit(function (e) {
+					e.preventDefault();
+					var results = $("#resultContainer"),
+			        	text = $("#search").val();
+			        results.empty();
+			        $.ajax({
+						type: "GET",
+						url: "http://blog.userinterfacemedia.com/",
+						cache: false,
+						dataType: "jsonp",
+						// work with the response
+						success: function( response ) {
+							console.log(response);
+							//results.append($(data).find("div:contains(" + text + ")"));
+						}
+					});
+				});
+			}
 
 			/**
 			 * Load Tweeter Feed
@@ -224,6 +248,7 @@ require(['jQuery', 'modernizr', 'angular', 'angularRoute', 'less', 'bootstrap', 
 					_this.prTweets();
 				}
 				_this.contactFormSubmit();
+				//_this.searchInSite();
 				return this; /* this refere to pr.uim */
 			};
 			return this.init(); /*initialize the init()*/

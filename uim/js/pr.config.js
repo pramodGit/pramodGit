@@ -32,7 +32,7 @@
 		prBlogUrl: 'http://blog.userinterfacemedia.com/?page=1&json=1',
 		prBlogUrlPage2: 'http://blog.userinterfacemedia.com/?page=2&json=1',
 		prBlogDataType: 'jsonp',
-		prBlogIndex: 3
+		prBlogIndex: 2
 	};
 	
 /**
