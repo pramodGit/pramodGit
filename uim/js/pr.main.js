@@ -104,9 +104,9 @@ require(['jQuery', 'modernizr', 'angular', 'angularRoute', 'less', 'bootstrap', 
 				$("#searchForm").submit(function (e) {
 					e.preventDefault();
 					var results = $("#resultContainer"),
-			        	text = $("#search").val();
-			        results.empty();
-			        $.ajax({
+					text = $("#search").val();
+					results.empty();
+					$.ajax({
 						type: "GET",
 						url: "http://blog.userinterfacemedia.com/",
 						cache: false,
@@ -118,7 +118,7 @@ require(['jQuery', 'modernizr', 'angular', 'angularRoute', 'less', 'bootstrap', 
 						}
 					});
 				});
-			}
+			};
 
 			/**
 			 * Load Tweeter Feed
@@ -135,12 +135,12 @@ require(['jQuery', 'modernizr', 'angular', 'angularRoute', 'less', 'bootstrap', 
              * Contact Form Submit
              */
             this.contactFormSubmit = function () {
-            	if ($("#contactForm").length > 0) {
+				if ($("#contactForm").length > 0) {
 					require(['uimContact'], function () {
 						//console.log('contact');
 					});
 				}
-            };
+			};
 
 			/**
 			 * Load Content
